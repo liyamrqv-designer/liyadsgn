@@ -1,0 +1,594 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+min-height:130vh;
+background:#e0f0ff;
+font-family:'Inter',sans-serif;
+scrollbar-width: none;
+}
+
+body::-webkit-scrollbar{
+display:none; /* Chrome / Safari */
+}
+
+
+/* заставка */
+
+.intro-image{
+position:fixed;
+top:50%;
+left:50%;
+
+width:100vw;
+height:100vh;
+
+transform:translate(-50%,-50%);
+
+z-index:1000;
+
+transition:width 1.5s ease,height 1.5s ease,top 1.5s ease,left 1.5s ease;
+}
+
+.intro-image img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.intro-image.shrink{
+width:400px;
+height:303px;
+}
+.video-link {
+  outline: none;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px 5px;
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  line-height: 1.2;
+  background: #0080FF;
+  border-radius: 6px;
+}
+
+.video-link:visited {
+  color: #fff;
+  background: #67B0F6;
+}
+
+/* header */
+
+.header{
+margin-top:80px;
+display:flex;
+justify-content:center;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 10;
+transition: transform 0.1s linear;
+}
+
+.folders{
+display:flex;
+gap:80px;
+}
+
+.folder{
+display:flex;
+flex-direction:column;
+align-items:center;
+cursor:pointer;
+}
+
+.folder img{
+width:60px;
+transition: transform 0.25s cubic-bezier(.2,.8,.2,1);
+}
+.folder img:hover{
+    transform: translateY(-8px);
+}
+.folder h3{
+margin-top:10px;
+font-size:14px;
+font-style: light;
+}
+
+
+/* overlay */
+
+.overlay{
+position:fixed;
+inset:0;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:rgba(0,0,0,.25);
+
+opacity:0;
+visibility:hidden;
+
+transition:.3s;
+
+z-index:9999;
+}
+
+.overlay.active{
+opacity:1;
+visibility:visible;
+}
+
+
+/* окно */
+
+.case-window{
+
+    width:1280px;
+    height:760px;
+
+    background:#F0F0F0;
+
+    border-radius:40px;
+
+    padding:20px;
+
+    display:flex;
+
+    gap:5px;
+
+    position:relative; /* фиксирует внутри overlay */
+}
+
+
+/* левая панель */
+
+.sidebar-left{
+
+width:290px;
+
+background:#F9F9F9;
+
+border-radius:25px;
+
+padding:15px 10px 10px 15px;
+}
+
+.desktop-title{
+
+font-size:14px;
+font-weight:400;
+color: #999999;
+
+margin-bottom:15px;
+}
+
+.case-list{
+display:flex;
+flex-direction:column;
+gap:5px;
+}
+
+.case-item{
+
+height:42px;
+
+display:flex;
+align-items:center;
+
+padding-left:10px;
+
+border-radius:12px;
+
+cursor:pointer;
+
+font-size:14px;
+}
+
+.case-item.active{
+
+background:#E8F3FF;
+
+color:#0080FF;
+}
+
+
+/* центр */
+
+.content{
+    flex:1;
+    background:#FFFFFF;
+    border-radius:25px;
+    overflow:hidden;
+
+    display:flex;
+}
+
+
+.content-scroll {
+
+    height:100%;
+    overflow-y:auto;
+    padding:10px;
+
+    scrollbar-width:none;
+}
+
+.content-scroll::-webkit-scrollbar{
+display:none;
+}
+#gallery{
+column-count:2;
+column-gap:12px;
+width:100%;
+}
+
+.gallery-item{
+break-inside:avoid;
+margin-bottom:12px;
+width:100%;
+}
+
+.gallery-item img{
+width:100%;
+height:auto;
+display:block;
+border-radius:10px;
+}
+/*
+#gallery{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+width:100%;
+}
+
+.gallery-item{
+width:100%;
+}
+
+.gallery-item img{
+width:100%;
+height:auto;
+display:block;
+border-radius:10px;
+}
+
+.gallery-item.half{
+grid-column:span 1;
+}
+
+.gallery-item.full{
+grid-column:1 / -1;
+}
+
+.gallery-item.left{
+grid-column:1;
+}
+
+
+.gallery-item.right{
+grid-column:2;
+} */
+
+/* правая колонка */
+
+.sidebar-right{
+
+width:290px;
+
+background:#F9F9F9;
+
+border-radius:25px;
+
+overflow:hidden;
+}
+
+.right-scroll{
+
+height:100%;
+
+overflow-y:auto;
+
+padding:15px 10px 10px 15px;
+}
+
+.project-title{
+
+font-size:14px;
+font-weight:400;
+color: #999999;
+
+margin-bottom:20px;
+}
+
+.project-description{
+
+font-size:14px;
+line-height:1.4;
+
+margin-bottom:20px;
+}
+
+.text-block{
+margin-bottom:20px;
+}
+
+.text-block h3{
+
+color:#0080FF;
+
+font-size:14px;
+font-weight:400;
+
+margin-bottom:5px;
+}
+
+.text-block h4{
+
+color:#999999;
+font-style: italic;
+font-size:14px;
+font-weight:400;
+
+margin-bottom:5px;
+}
+
+.text-block p{
+
+font-size:14px;
+line-height:1.4;
+}
+
+#gallery.about-mode{
+column-count:auto;
+display:block;
+padding:20px;
+}
+
+.about-files{
+display:grid;
+grid-template-columns: repeat(2, 1fr);
+gap:30px;
+}
+
+.file{
+display:flex;
+flex-direction:column;
+align-items:center;
+text-decoration:none;
+width:80px;
+text-align:center;
+}
+
+.file img{
+width:60px;
+height:auto;
+display:block;
+}
+
+.file p{
+margin-top:6px;
+font-size:12px;
+text-align:center;
+color:#000;
+}
+
+.file:hover{
+background:#E8F3FF;
+border-radius:8px;
+}
+.no-hover{
+pointer-events: none;
+}
+.random-box{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+gap:24px;
+}
+
+/* фиксируем область под изображение */
+.random-image-wrap{
+width:500px;
+height:500px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:25px;
+}
+
+#randomMain{
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  display: block;
+}
+.random-result{
+border-radius:16px;
+overflow:hidden;
+}
+/* кнопки не двигаются */
+#randomControls{
+height:40px;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+/* стиль кнопок */
+.random-box button{
+padding:12px 26px;
+font-size:14px;
+background:#fff;
+border:1px solid #E8F3FF;
+border-radius:15px;
+cursor:pointer;
+transition:all .25s ease;
+}
+
+.random-box button:hover{
+    background:#E8F3FF;
+color:#0080FF;
+}
+ .random-box button:active{
+    background:#E8F3FF;
+    color:#2E3436;
+}
+#randomMain{
+max-width:100%;
+max-height:100%;
+object-fit:contain;
+opacity:1;
+transition:opacity .5s ease;
+}
+
+#randomMain.hidden{
+opacity:0;
+}
+
+#copyMsg{
+position:fixed;
+bottom:700px;
+left:50%;
+transform:translateX(-50%);
+background:#E8F3FF;
+color:#0080FF;
+padding:8px 14px;
+border-radius:6px;
+opacity:0;
+transition:opacity .25s;
+pointer-events:none;
+}
+
+#copyMsg.show{
+opacity:1;
+}
+
+/*#heroText{
+position: fixed;
+left: 50%;
+top: 80%;
+transform: translate(-50%, -50%);
+opacity: 0;
+transition: opacity 0.8s ease;
+z-index: 5;
+max-width: 260px;
+}
+
+#heroText.show{
+opacity: 1;
+}
+#heroText span{
+transition: transform 0.2s;
+}
+
+#heroText span:hover{
+transform: scale(1.2) rotate(0deg);
+} */
+#heroText{
+ position: fixed;
+left: 40%;
+top: 75%;
+  display: block;
+  margin: 3px auto 0;    /* по центру под монстром */
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .3s ease;
+  z-index: 1;
+}
+#heroText.show{ opacity: 1; }
+.stack{
+  display: grid;
+  grid-template-areas: "a";
+   min-height: clamp(130px, 14vw, 180px);
+  width: max-content;
+}
+.stack > *{ grid-area: a; white-space: nowrap; }
+.front, .top{ z-index: 2; align-self: start; justify-self: start; }
+.bottom{      z-index: 2; align-self: end;   justify-self: start; }
+.back{        z-index: 1; align-self: center;justify-self: start; }
+
+/* Шрифты */
+.inter{
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: -0.10em;
+  line-height: 0.25;
+  color: #2E3436;
+}
+.script{
+  font-family: 'Great Vibes', cursive;
+  font-size: 200px;
+  line-height: 0.25;
+  color: #67B0F6;
+  opacity: .95;
+  pointer-events: none;
+  
+}
+
+/* Микроподгонка скрипта по сценам */
+.s1 .back{ transform: translateX(50px)
+    translateY(-10px); }
+.s2 .script{ transform: translateY(-40px); }   /* поднять «прямо» */
+.s2 .bottom{ transform: 
+    translateX(80px)
+    translateY(-60px); } 
+/* === Desktop: привести RANDOM к виду из второго файла === */
+@media (min-width: 921px){
+  /* центрируем окно как и раньше (на всякий случай дублирую) */
+  .content-scroll:has(#gallery.single-col){
+    display: flex;
+    align-items: center;     /* по высоте */
+    justify-content: center; /* по ширине */
+  }
+
+  /* контейнер рандома — как во 2-м файле */
+  #gallery.single-col .random-box{
+    width: 500px !important;     /* было 540px */
+    margin: 0 auto !important;
+    gap: 24px;
+  }
+
+  /* область под картинку/гиф — фиксированный квадрат 500×500 */
+  #gallery.single-col .random-image-wrap{
+    width: 500px !important;
+    height: 500px !important;
+    aspect-ratio: auto !important; /* выключаем предыдущий квадрат через ratio */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+  }
+
+  /* картинка/гиф заполняют область (как во 2-м файле) */
+  #gallery.single-col .random-image-wrap img#randomMain{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  /* высота зоны с кнопкой — как во 2-м файле */
+  #gallery.single-col #randomControls{
+    height: 40px !important;   /* было 56px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+
+  <link rel="stylesheet" href="css/mainmob.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="intro-image" id="intro">
+    <img src="images/hero-image.png" alt="Hero Image">
+  </div>
+
+  <header class="header">
+    <div class="folders">
+      <div class="folder" data-case="1">
+        <img src="images/Folder.png" alt="">
+        <h3>Папка</h3>
+      </div>
+      <div class="folder" data-case="2">
+        <img src="images/Folder.png" alt="">
+        <h3>Папка (1)</h3>
+      </div>
+      <div class="folder" data-case="3">
+        <img src="images/Folder.png" alt="">
+        <h3>Папка (2)</h3>
+      </div>
+      <div class="folder" data-case="4">
+        <img src="images/Folder.png" alt="">
+        <h3>Папка (3)</h3>
+      </div>
+      <div class="folder" data-case="5">
+        <img src="images/Folder.png" alt="">
+        <h3>Папка (4)</h3>
+      </div>
+    </div>
+  </header>
+
+  <div id="heroText"></div>
+
+  <div class="overlay" id="overlay">
+    <div class="case-window">
+
+      <!-- Мобильная верхняя панель -->
+      <div class="mbar" id="mBar">
+        <button class="mbar-btn" id="mClose" aria-label="Закрыть">×</button>
+        <div class="mbar-title" id="mTitle"></div>
+        <button class="mbar-btn" id="mBurger" aria-label="Меню">≡</button>
+      </div>
+
+      <!-- Мобильное выезжающее меню -->
+      <nav class="mdrawer" id="mDrawer" aria-hidden="true">
+        <div class="mdrawer-head">Стол</div>
+        <div class="mdrawer-list">
+          <button class="mitem" data-case="1">папка</button>
+          <button class="mitem" data-case="2">папка (1)</button>
+          <button class="mitem" data-case="3">папка (2)</button>
+          <button class="mitem" data-case="4">папка (3)</button>
+          <button class="mitem" data-case="5">папка (4)</button>
+          <button class="mitem" data-case="6">random</button>
+          <button class="mitem" data-case="7">обо мне</button>
+        </div>
+      </nav>
+
+      <!-- Левая панель (десктоп) -->
+      <aside class="sidebar-left">
+        <h2 class="desktop-title">Стол</h2>
+        <div class="case-list">
+          <div class="case-item" data-case="1">папка</div>
+          <div class="case-item" data-case="2">папка (1)</div>
+          <div class="case-item" data-case="3">папка (2)</div>
+          <div class="case-item" data-case="4">папка (3)</div>
+          <div class="case-item" data-case="5">папка (4)</div>
+          <div class="case-item" data-case="6">random</div>
+          <div class="case-item" data-case="7">обо мне</div>
+        </div>
+      </aside>
+
+     <main class="content">
+  <div class="content-scroll">
+    <!-- Заголовок/описание для особых мобильных сцен (random/обо мне) -->
+    <div id="mobileHead" class="mobile-head"></div>
+
+    <!-- Контентная галерея (нужен и id, и класс) -->
+    <div id="gallery" class="gallery"></div>
+
+    <!-- Текст проекта для мобилки -->
+    <div id="mobileText" class="mobile-text"></div>
+
+    <!-- Плавающая кнопка "к тексту" -->
+    <button id="toTextBtn" class="to-text-btn" type="button">к тексту</button>
+  </div>
+</main>
+
+      <!-- Правая панель (десктоп) -->
+      <aside class="sidebar-right">
+        <div class="right-scroll">
+          <h2 class="project-title" id="projectTitle"></h2>
+          <p class="project-description" id="projectDescription"></p>
+          <div id="projectContent"></div>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <script src="js/scriptmob.js"></script>
+</body>
+</html>
