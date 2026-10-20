@@ -63,49 +63,6 @@ const projectContent = document.getElementById('projectContent');
 const gallery = document.getElementById('gallery');
 
 let firstRandomRun = true;
-/*
-function createMasonry(images){
-
-gallery.innerHTML = '';
-
-const columnCount = 2;
-const columns = [];
-
-for(let i = 0; i < columnCount; i++){
-
-    const col = document.createElement('div');
-    col.className = 'masonry-column';
-
-    gallery.appendChild(col);
-    columns.push(col);
-}
-
-images.forEach(src => {
-
-    const item = document.createElement('div');
-    item.className = 'gallery-item';
-
-    const img = document.createElement('img');
-    img.src = src;
-
-    item.appendChild(img);
-
-    img.onload = () => {
-
-        let shortest = columns[0];
-
-        columns.forEach(col => {
-            if(col.offsetHeight < shortest.offsetHeight){
-                shortest = col;
-            }
-        });
-
-        shortest.appendChild(item);
-
-    };
-
-});
-}*/
 
 function collageText(element, text) {
   const fonts = [
@@ -211,6 +168,7 @@ images:[
 'images/case1/8.png',
 'images/case1/9.png',
 'images/case1/3.png',
+'images/case1/12.png',
 'images/case1/11.png'
 ],
 
@@ -333,7 +291,7 @@ images:[
 'images/case3/1.png',
 'images/case3/2.png',
 'images/case3/3.png',
-'images/case3/4.jpg',
+'images/case3/4.png',
 'images/case3/9.gif',
 'images/case3/6.png',
 'images/case3/7.png',

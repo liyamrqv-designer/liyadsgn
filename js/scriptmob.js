@@ -93,7 +93,7 @@ const cases = {
     images:[
       'images/case1/1.png','images/case1/7.png','images/case1/10.png','images/case1/4.png',
       'images/case1/5.png','images/case1/6.png','images/case1/2.png','images/case1/8.png',
-      'images/case1/9.png','images/case1/3.png','images/case1/11.png'
+      'images/case1/9.png','images/case1/3.png','images/case1/12.png','images/case1/11.png'
     ],
     description:'<strong>Научно-инженерный центр - занимается  IT-услуга для бизнеса и промышленности: от проектирования и разработки систем до производства, внедрения и их сопровождения</strong>',
     content:`<div class="text-block">
@@ -197,7 +197,7 @@ const cases = {
       'images/case3/1.png',
 'images/case3/2.png',
 'images/case3/3.png',
-'images/case3/4.jpg',
+'images/case3/4.png',
 'images/case3/9.gif',
 'images/case3/6.png',
 'images/case3/7.png',
