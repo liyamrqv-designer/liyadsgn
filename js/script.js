@@ -158,7 +158,7 @@ const cases = {
 title:'Редизайн корпоративного стиля',
 
 images:[
-'images/case1/1.png',
+'images/case1/13.png',
 'images/case1/7.png',
 'images/case1/10.png',
 'images/case1/4.png',
