@@ -474,7 +474,7 @@ custom:`
 </a>
 
 
-<a class="file" href="files/cv.pdf" target="_blank">
+<a class="file" href="https://drive.google.com/file/d/1tFOxGUJEMxmsq2qesLfwmswyyujQClkI/view?usp=drive_link" target="_blank">
 <img src="images/cv.png">
 <p>cv</p>
 </a>

@@ -350,7 +350,7 @@ content:`<div class="text-block">
           <img src="images/tg.png" alt="">
           <p>@mauorik</p>
         </a>
-        <a class="file" href="images/cv.pdf" target="_blank">
+        <a class="file" href="https://drive.google.com/file/d/1tFOxGUJEMxmsq2qesLfwmswyyujQClkI/view?usp=drive_link" target="_blank">
           <img src="images/cv.png" alt="">
           <p>cv</p>
         </a>
